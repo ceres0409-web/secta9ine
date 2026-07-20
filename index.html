@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신유경 | 섹타나인 경영기획 포트폴리오</title>
+<meta name="description" content="사업의 실적 편차를 분석하고 다음 실행안으로 연결하는 경영기획자 — 신유경의 섹타나인 경영기획 담당 지원 포트폴리오">
+<meta property="og:title" content="신유경 | 섹타나인 경영기획 포트폴리오">
+<meta property="og:description" content="KPI 설계 · 실적 편차 분석 · 매출 Forecast · 경영보고 자동화 — 증거 중심 포트폴리오">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --ink:#101828;
+  --ink-2:#344054;
+  --muted:#667085;
+  --line:#E4E7EC;
+  --line-2:#D0D5DD;
+  --bg:#F7F8FA;
+  --panel:#F2F4F7;
+  --navy:#0B1220;
+  --accent:#EA580C;
+  --accent-soft:#FFF7ED;
+  --accent-line:#FED7AA;
+  --rose:#B42318;
+  --rose-soft:#FEF3F2;
+  --green:#067647;
+  --shadow-sm:0 10px 28px rgba(16,24,40,.07);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  margin:0;
+  font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid rgba(234,88,12,.45);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.topbar{
+  position:sticky;top:0;z-index:30;
+  border-bottom:1px solid rgba(228,231,236,.86);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(18px) saturate(1.45);
+}
+.topbar .wrap{height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;white-space:nowrap;font-size:14px}
+.brand i{width:26px;height:26px;border-radius:8px;background:var(--navy);display:grid;place-items:center;color:#fff;font-style:normal;font-size:13px}
+.nav{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);font-weight:700}
+.nav a:hover{color:var(--accent)}
+.nav .contact{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink)}
+section{padding:76px 0}
+.section-head{margin-bottom:28px;max-width:980px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:900;margin-bottom:8px}
+h2{font-size:32px;line-height:1.22;letter-spacing:-.03em;margin:0}
+.section-head p{margin:10px 0 0;color:var(--muted);font-size:15px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+
+/* Hero */
+.hero{
+  padding:60px 0 56px;
+  background:
+    radial-gradient(900px 420px at 18% 0%, rgba(234,88,12,.07), transparent 58%),
+    linear-gradient(180deg,#fff 0%,#F7F8FA 100%);
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(420px,.9fr);gap:36px 56px;align-items:start}
+.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;color:var(--ink-2);font-size:12px;font-weight:800;box-shadow:var(--shadow-sm)}
+.kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(234,88,12,.14)}
+h1{margin:20px 0 0;font-size:44px;line-height:1.18;letter-spacing:-.04em;word-break:keep-all}
+.hero-sub{margin-top:14px;font-size:15px;color:var(--ink-2);font-weight:700}
+.hero-sub span{display:inline-block;margin-right:14px}
+.hero-sub span:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:7px;vertical-align:2px}
+.skill-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.skill-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px;font-weight:800;color:var(--ink-2);box-shadow:var(--shadow-sm)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 16px;font-size:14px;font-weight:850;border:1px solid var(--line);background:#fff;box-shadow:0 8px 22px rgba(16,24,40,.05)}
+.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stat-stack{display:grid;gap:12px}
+.stat-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
+.stat-top{display:flex;align-items:baseline;gap:12px}
+.stat-top .num{font-size:32px;font-weight:950;letter-spacing:-.04em;color:var(--navy)}
+.stat-top .name{font-size:14px;font-weight:850;color:var(--ink-2)}
+.stat-meta{margin:10px 0 0;display:grid;gap:3px;font-size:12px;color:var(--muted)}
+.stat-meta b{color:var(--ink-2);font-weight:800}
+.todo{color:var(--rose);font-weight:800}
+.hero-note{margin-top:12px;font-size:12px;color:var(--muted)}
+
+/* Why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why-card{padding:20px 22px;border-top:4px solid var(--accent)}
+.why-card .t{font-size:12px;font-weight:950;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.why-card h3{margin:8px 0 8px;font-size:17px;letter-spacing:-.01em}
+.why-card p{margin:0;font-size:13px;color:var(--ink-2)}
+.why-card a{font-weight:800;color:var(--accent);font-size:12.5px;display:inline-block;margin-top:10px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.tstep{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 14px;position:relative}
+.tstep:not(:last-child):after{content:"";position:absolute;right:-10px;top:50%;width:10px;height:1px;background:var(--line-2)}
+.tstep .step{font-size:11px;color:var(--accent);font-weight:950;letter-spacing:.06em}
+.tstep strong{display:block;font-size:13.5px;margin-top:5px}
+.tstep span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+
+/* Projects */
+.case{border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:18px}
+.case-head{background:var(--navy);color:#fff;padding:22px 26px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+.case-head .label{font-size:11.5px;color:#FDBA74;font-weight:900;letter-spacing:.1em;text-transform:uppercase;width:100%}
+.case-head h3{margin:6px 0 0;font-size:21px;line-height:1.25;letter-spacing:-.02em}
+.case-head .meta{font-size:12.5px;color:#98A2B3;margin-top:6px}
+.case-body{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.cell{background:#fff;padding:16px 18px}
+.cell .t{font-size:11.5px;font-weight:950;color:var(--accent);letter-spacing:.07em;text-transform:uppercase}
+.cell p{margin:7px 0 0;font-size:13px;color:var(--ink-2)}
+.cell ul{margin:7px 0 0;padding-left:16px;font-size:13px;color:var(--ink-2)}
+.cell li{margin:2px 0}
+.cell.wide{grid-column:1/-1}
+.cell.result{background:var(--accent-soft)}
+.cell .t.gray{color:var(--muted)}
+.result-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.rs{background:#fff;border:1px solid var(--accent-line);border-radius:12px;padding:11px 12px}
+.rs b{display:block;font-size:20px;font-weight:950;letter-spacing:-.03em;color:var(--navy)}
+.rs span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+.case.compact .case-body{grid-template-columns:repeat(2,1fr)}
+
+/* Artifacts */
+.artifact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+figure.artifact{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm)}
+figure.artifact img{display:block;width:100%;height:auto}
+.artifact-ph{padding:22px;background:repeating-linear-gradient(45deg,#FAFBFC,#FAFBFC 12px,#F4F5F7 12px,#F4F5F7 24px);border-bottom:1px solid var(--line);min-height:150px}
+.artifact-ph b{display:block;font-size:14.5px}
+.artifact-ph ul{margin:10px 0 0;padding-left:16px;font-size:12.5px;color:var(--muted)}
+.artifact-ph li{margin:2px 0}
+figure.artifact figcaption{padding:12px 18px;font-size:12px;color:var(--muted)}
+figure.artifact figcaption b{color:var(--accent);font-weight:800}
+
+/* Match table */
+.sheet-ui{overflow:hidden}
+.sheet-bar{display:flex;align-items:center;gap:10px;padding:13px 18px;background:#fff;border-bottom:1px solid var(--line)}
+.sheet-dot{width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:20px 0 0 #B7791F,40px 0 0 #F04438}
+.sheet-title{margin-left:46px;font-size:13px;font-weight:850;color:var(--ink-2)}
+.sheet-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:13px;background:#fff}
+th,td{border:1px solid var(--line);padding:10px 13px;text-align:left;vertical-align:top}
+th{background:#F9FAFB;color:var(--muted);font-weight:900;white-space:nowrap}
+td.req{font-weight:850;white-space:nowrap}
+td a{color:var(--accent);font-weight:800}
+
+/* Domain */
+.domain-card{padding:24px;display:grid;grid-template-columns:auto 1fr;gap:20px 28px;align-items:start}
+.domain-badge{width:56px;height:56px;border-radius:16px;background:var(--navy);color:#FDBA74;display:grid;place-items:center;font-weight:950;font-size:15px}
+.domain-card h3{margin:0 0 6px;font-size:18px}
+.domain-card .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.domain-card ul{margin:0;padding-left:16px;font-size:13.5px;color:var(--ink-2)}
+.domain-card li{margin:3px 0}
+.footnote{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* Budget */
+.budget-note{padding:20px 24px;border-left:4px solid var(--accent);margin-bottom:16px}
+.budget-note p{margin:0;font-size:14px;color:var(--ink-2)}
+.sample-flag{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--rose-soft);color:var(--rose);font-size:11.5px;font-weight:900;margin-bottom:10px}
+.budget-table td,.budget-table th{white-space:nowrap;font-size:12.5px}
+.budget-table td.pos{color:var(--green);font-weight:800}
+.budget-table td.neg{color:var(--rose);font-weight:800}
+.budget-caption{font-size:12px;color:var(--muted);padding:11px 18px;background:#fff;border-top:1px solid var(--line)}
+
+/* Plan */
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.plan{padding:20px 22px}
+.plan .day{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--navy);color:#fff;font-size:12.5px;font-weight:900}
+.plan h3{margin:12px 0 8px;font-size:16px}
+.plan ul{margin:0;padding-left:16px;font-size:13px;color:var(--ink-2)}
+.plan li{margin:3px 0}
+.plan-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px;font-size:13px;font-weight:900}
+.plan-flow span{padding:8px 11px;border-radius:999px;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent)}
+.plan-flow i{color:var(--line-2);font-style:normal;font-weight:900}
+
+/* Closing */
+.closing{background:var(--navy);color:#fff;padding:68px 0}
+.closing-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.closing h2{font-size:32px;color:#fff}
+.closing .strengths{display:grid;gap:9px;margin:22px 0 0;max-width:640px}
+.closing .strengths div{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:13px;padding:12px 15px;font-size:13.5px;color:#E4E7EC}
+.closing .strengths b{color:#FDBA74;margin-right:8px}
+.closing .last{margin-top:20px;color:#D0D5DD;max-width:640px;font-size:14px}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;min-width:260px}
+.contact-card b{font-size:14px}
+.contact-card a,.contact-card .ph{display:block;color:#fff;font-weight:800;margin-top:8px;font-size:14px}
+.foot{padding:22px 0;color:var(--muted);font-size:12px;text-align:center;background:#fff;border-top:1px solid var(--line)}
+
+/* Reveal — JS 활성 시에만 적용 (noscript 안전) */
+html.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+html.js .reveal.on{opacity:1;transform:none}
+
+@media(max-width:1040px){
+  .hero-grid,.closing-grid{grid-template-columns:1fr}
+  .why-grid,.plan-grid{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .case-body{grid-template-columns:1fr 1fr}
+  .result-stats{grid-template-columns:1fr 1fr}
+  .artifact-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .nav a:not(.contact){display:none}
+  section{padding:52px 0}
+  .hero{padding:44px 0 44px}
+  h1{font-size:31px}
+  h2{font-size:24px}
+  .why-grid,.timeline,.case-body,.case.compact .case-body,.plan-grid,.result-stats{grid-template-columns:1fr}
+  .domain-card{grid-template-columns:1fr}
+  .stat-top .num{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* Print / PDF */
+@media print{
+  body{background:#fff;color:#000}
+  .topbar,.hero-actions,.btn,.nav{display:none !important}
+  section{padding:18px 0;page-break-inside:auto}
+  .hero{padding:10px 0;background:#fff}
+  .panel,.case,.stat-card,figure.artifact,.tstep,.why-card{box-shadow:none !important}
+  .case{page-break-inside:avoid;margin-bottom:12px}
+  .why-card,.plan,.stat-card,figure.artifact{page-break-inside:avoid}
+  .case-head{background:#0B1220 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .closing{background:#0B1220 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:24px 0}
+  a[href]:after{content:"" !important}
+  html.js .reveal{opacity:1 !important;transform:none !important}
+  h1{font-size:30px}
+  h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="페이지 맨 위로"><i>BP</i> 신유경 | Business Planning</a>
+    <nav class="nav" aria-label="주요 섹션">
+      <a href="#why">Why</a>
+      <a href="#projects">Projects</a>
+      <a href="#artifacts">산출물</a>
+      <a href="#match">업무 매칭</a>
+      <a href="#budget">예산</a>
+      <a href="#plan">90-Day</a>
+      <a class="contact" href="mailto:ceres0409@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Secta9ine — 경영기획 담당 지원 · 신유경</div>
+        <h1>사업의 실적 편차를 분석하고<br>다음 실행안으로 연결하는 경영기획자</h1>
+        <p class="hero-sub"><span>사업·경영기획 실무 약 7년</span><span>결제·플랫폼·의료서비스 사업 경험</span></p>
+        <div class="skill-chips" aria-label="핵심 역량">
+          <span class="skill-chip">KPI 설계와 실적 편차 분석</span>
+          <span class="skill-chip">매출 Forecast·경영보고 자동화</span>
+          <span class="skill-chip">결제·멤버십 플랫폼 실무 경험</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">핵심 프로젝트 보기</a>
+          <a class="btn" href="#match">채용업무 매칭 보기</a>
+        </div>
+      </div>
+      <div>
+        <div class="stat-stack" aria-label="대표 성과 3건">
+          <div class="stat-card reveal">
+            <div class="stat-top"><span class="num">+7%p</span><span class="name">전환율 개선 · 3개 지점 기준</span></div>
+            <div class="stat-meta">
+              <span><b>측정 기간</b> <span class="todo">[확인 필요]</span> · <b>비교 기준</b> <span class="todo">[확인 필요]</span></span>
+              <span><b>기여</b> KPI 정의, 주간 편차 분석, 개선안 실행</span>
+            </div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-top"><span class="num">+21%</span><span class="name">평균 구매 단가 상승 · 3개 지점 기준</span></div>
+            <div class="stat-meta">
+              <span><b>측정 기간</b> <span class="todo">[확인 필요]</span> · <b>비교 기준</b> <span class="todo">[확인 필요]</span></span>
+              <span><b>기여</b> 상품 믹스 재구성 기획·실행 주도</span>
+            </div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-top"><span class="num">+10%p</span><span class="name">재방문률 증가 · 3개월 이내 재방문 기준</span></div>
+            <div class="stat-meta">
+              <span><b>적용 범위</b> 3개 지점 · <b>비교 기준</b> <span class="todo">[확인 필요]</span></span>
+              <span><b>기여</b> D+1/7/30 CRM 시나리오 설계</span>
+            </div>
+          </div>
+        </div>
+        <p class="hero-note">모든 성과는 이력서 기재 수치 기준이며, 측정 조건은 면접에서 상세히 설명드립니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 섹타나인에 적합한 이유 -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Why Me</div>
+        <h2>섹타나인에 적합한 이유</h2>
+      </div>
+      <div class="why-grid">
+        <article class="panel why-card reveal">
+          <div class="t">01 · KPI &amp; 실적 관리</div>
+          <h3>KPI–실적 마감–차이 분석 사이클을 직접 운영했습니다</h3>
+          <p>3개 지점의 공통 KPI를 정의하고 주간·월간 실적 마감과 편차 분석, 개선 실행까지 반복 운영했습니다.</p>
+          <a href="#p1">→ Project 01</a>
+        </article>
+        <article class="panel why-card reveal">
+          <div class="t">02 · Forecast &amp; 자동화</div>
+          <h3>매출 Forecast와 경영보고를 시스템으로 구현했습니다</h3>
+          <p>분산된 데이터를 통합해 기대매출 자동 집계와 AI 리포트 체계를 직접 구현해 운영 중입니다.</p>
+          <a href="#p2">→ Project 02</a>
+        </article>
+        <article class="panel why-card reveal">
+          <div class="t">03 · 도메인</div>
+          <h3>결제·멤버십 플랫폼에서 실무를 시작했습니다</h3>
+          <p>머지포인트에서 브랜드 제휴와 구독 서비스를 실행했습니다. 같은 산업의 경험은 빠른 적응의 기반입니다.</p>
+          <a href="#domain">→ 도메인 경험</a>
+        </article>
+      </div>
+      <div class="timeline reveal" aria-label="커리어 타임라인">
+        <div class="tstep"><span class="step">2019–21</span><strong>머지포인트</strong><span>결제·멤버십 플랫폼</span></div>
+        <div class="tstep"><span class="step">2021–22</span><strong>어브로딘</strong><span>사업기획 팀장 · IR</span></div>
+        <div class="tstep"><span class="step">2022–23</span><strong>호주 창업</strong><span>유학원 플랫폼 공동 창업</span></div>
+        <div class="tstep"><span class="step">2023–25</span><strong>디렉터홀딩스</strong><span>본부장 · 3개 지점 KPI</span></div>
+        <div class="tstep"><span class="step">2025–</span><strong>메디힘</strong><span>파트장 · 수익모델 설계</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 핵심 프로젝트 3개 -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Key Projects</div>
+        <h2>핵심 프로젝트 3건</h2>
+        <p>지표와 방법을 왜 그렇게 선택했는지(Diagnosis·Decision)까지 포함해 정리했습니다.</p>
+      </div>
+
+      <!-- Project 1 (대형) -->
+      <article class="case reveal" id="p1">
+        <div class="case-head">
+          <div class="label">Project 01 · KPI &amp; 실적 관리 — 핵심 프로젝트</div>
+          <h3>3개 지점 통합 KPI·실적 관리 체계 구축</h3>
+          <p class="meta">디렉터홀딩스 · 네트워크본부 본부장 · 2023.12–2025.10 · 적용 범위: 병원 네트워크 3개 지점</p>
+        </div>
+        <div class="case-body">
+          <div class="cell"><div class="t">Situation</div><p>신규 브랜드의 창업 셋업 멤버로 합류해, 지점이 늘어나는 단계에서 성과 관리 체계가 없는 상태였습니다.</p></div>
+          <div class="cell"><div class="t">Problem</div><p>지점별 성과가 정성적 판단에 의존해, 성과 차이의 원인을 객관적으로 설명할 수 없었습니다.</p></div>
+          <div class="cell"><div class="t">Diagnosis</div><p>지점별 매출 규모가 달라 절대 매출만으로는 성과 비교가 어렵다고 판단했습니다. <span class="todo">[사실관계 확인 필요]</span> 비교 가능한 비율 지표가 필요했습니다.</p></div>
+          <div class="cell"><div class="t">Decision</div><p>전환율·객단가·재방문률·채널별 유입을 공통 KPI로 정의하고, 주간(마감)·월간(원인 분석) 이원 주기로 운영하기로 결정했습니다.</p></div>
+          <div class="cell"><div class="t">Action</div><ul><li>KPI 정의서·주간/월간 리포트 정례화</li><li>편차 원인 분석(신환 감소, 객단가 하락 등)</li><li>상품 믹스 재구성, D+1/7/30 CRM 시나리오 실행</li></ul></div>
+          <div class="cell"><div class="t gray">My Contribution</div><ul><li>직접 수행: KPI 정의, 리포트 설계, 편차 분석</li><li>의사결정 주도: 개선안 우선순위 결정</li><li>협업: 지점별 실행은 각 지점 현장 팀 담당</li></ul></div>
+          <div class="cell wide result"><div class="t">Result</div>
+            <div class="result-stats">
+              <div class="rs"><b>+7%p</b><span>전환율 · 기간 <span class="todo">[확인 필요]</span></span></div>
+              <div class="rs"><b>+21%</b><span>평균 구매 단가 · 기간 <span class="todo">[확인 필요]</span></span></div>
+              <div class="rs"><b>+10%p</b><span>재방문률 · 3개월 이내 기준</span></div>
+              <div class="rs"><b>80%</b><span>신규 지점 3개월 내 매출 안정화율</span></div>
+            </div>
+          </div>
+          <div class="cell"><div class="t gray">Deliverable</div><p>주간·월간 실적 리포트, KPI 정의 체계, CRM 발송 시나리오 <a href="#artifacts" style="color:var(--accent);font-weight:800">→ 산출물</a></p></div>
+          <div class="cell"><div class="t gray">Relevance to Secta9ine</div><p>사업본부 KPI 수립·성과평가, 월간 실적 마감·차이 분석 업무와 동일한 구조입니다.</p></div>
+          <div class="cell"><div class="t gray">Limitation &amp; Learning</div><p>매출·운영 지표 중심의 관리였고 비용을 포함한 손익 마감은 아니었습니다. 성과 관리의 핵심은 조직이 같은 숫자를 보게 만드는 것임을 배웠습니다.</p></div>
+        </div>
+      </article>
+
+      <!-- Project 2 (간결) -->
+      <article class="case compact reveal" id="p2">
+        <div class="case-head">
+          <div class="label">Project 02 · Forecast &amp; 자동화</div>
+          <h3>주 단위 실적 예측·보고 자동화 시스템 구축</h3>
+          <p class="meta">메디힘 · 플랫폼 사업부 파트장 · 2025.10–현재 · 적용 범위: 플랫폼 사업부</p>
+        </div>
+        <div class="case-body">
+          <div class="cell"><div class="t">Situation · Problem</div><p>상담·결제 데이터가 여러 채널에 분산되어, 차월 매출 전망을 내려면 매번 수작업 취합이 필요했습니다.</p></div>
+          <div class="cell"><div class="t">Diagnosis · Decision</div><p>보고 양식이 아니라 데이터 구조의 문제라고 진단하고, 외부 툴 도입 대신 통합 데이터 구조와 자동 집계를 직접 구축하기로 결정했습니다.</p></div>
+          <div class="cell"><div class="t">Action</div><p>요구사항 정의, 데이터 구조 설계, 자동 집계 로직·AI 분류·리포트 구현의 전 과정을 수행했습니다. 활용 도구: Supabase SQL, Google Sheets, OpenAI API.</p></div>
+          <div class="cell result"><div class="t">Result</div><p>전환예정 고객 × 예상매출 기반의 상시 기대매출 Forecast 운영. 주간 실적 보고의 수작업 취합 단계를 자동 집계로 대체 (절감 시간 <span class="todo">[확인 필요]</span>).</p></div>
+          <div class="cell"><div class="t gray">Relevance to Secta9ine</div><p>주 단위 손익 예측의 매출 측 Forecast, 경영진 수시 보고 대응에 같은 방식을 적용할 수 있습니다.</p></div>
+          <div class="cell"><div class="t gray">Limitation &amp; Learning</div><p>매출 측 Forecast에 한정되며, 비용을 포함한 손익 통합 예측은 수행하지 않았습니다. 데이터 구조를 직접 설계한 경험은 개발·데이터 조직과의 협업 언어가 됩니다.</p></div>
+        </div>
+      </article>
+
+      <!-- Project 3 (간결) -->
+      <article class="case compact reveal" id="p3">
+        <div class="case-head">
+          <div class="label">Project 03 · 수익모델 설계</div>
+          <h3>신규 플랫폼 수익모델·수수료 정책 설계</h3>
+          <p class="meta">메디힘 · 플랫폼 사업부 파트장 · 2025.10–현재 · 적용 범위: 글로벌 의료관광 플랫폼 (Pre-Launch)</p>
+        </div>
+        <div class="case-body">
+          <div class="cell"><div class="t">Situation · Problem</div><p>Pre-Launch 단계로 수익모델·운영 정책·성과 측정 구조가 없어, 플랫폼의 수익원과 성과 판단 기준을 처음부터 정의해야 했습니다.</p></div>
+          <div class="cell"><div class="t">Diagnosis · Decision</div><p>수수료 기반 플랫폼의 손익은 수수료 구조가 결정한다고 판단해, 론칭 전에 수익모델·정책·KPI를 함께 설계하기로 결정했습니다.</p></div>
+          <div class="cell"><div class="t">Action</div><p>거래 구간별 수수료 정책 구조화, 환불·이용정책 수립, 운영 리스크 대응 프로세스 설계, KPI 초안과 성과 측정 구조 정의.</p></div>
+          <div class="cell result"><div class="t">Result</div><p>론칭 전에 수익 구조–성과 측정의 관리 체계를 수립하고, 의료기관 약 10곳과의 협업 구조를 구축했습니다.</p></div>
+          <div class="cell"><div class="t gray">My Contribution</div><p>정책·구조 설계를 주도했으며, 시스템 구현은 외부 개발사, 병원 제휴는 사업부 협업으로 진행했습니다.</p></div>
+          <div class="cell"><div class="t gray">Relevance &amp; Limitation</div><p>수수료 기반 사업의 계획 숫자를 다룬 경험은 결제·정산 사업의 손익 관리와 같은 문법입니다. 단, 론칭 전 단계로 실제 손익 실적의 검증은 진행 중입니다.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. 산출물 -->
+  <section id="artifacts">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Deliverables</div>
+        <h2>업무 산출물</h2>
+        <p>실제 업무 산출물을 익명화·재구성한 이미지로 교체 예정입니다. 아래는 각 산출물의 구성 안내입니다.</p>
+      </div>
+      <div class="artifact-grid">
+        <figure class="artifact reveal">
+          <img src="assets/artifact_kpi.png" alt="주간 KPI 실적표 (익명화)" onerror="this.style.display='none'">
+          <div class="artifact-ph" role="img" aria-label="주간 KPI 실적표 플레이스홀더">
+            <b>① 주간 KPI 실적표 — Project 01</b>
+            <ul>
+              <li>기간별 KPI 추이 (전환율·객단가·재방문률)</li>
+              <li>목표 대비 실적 표, 지점 간 비교</li>
+              <li>편차 원인 메모와 실행안, 실행 후 지표 변화</li>
+            </ul>
+          </div>
+          <figcaption><b>교체 예정</b> — 실제 업무 산출물을 익명화·재구성한 이미지로 교체 예정</figcaption>
+        </figure>
+        <figure class="artifact reveal">
+          <img src="assets/artifact_forecast.png" alt="기대매출 Forecast 보드 구조 (익명화)" onerror="this.style.display='none'">
+          <div class="artifact-ph" role="img" aria-label="Forecast 구조 플레이스홀더">
+            <b>② 기대매출 Forecast 보드 — Project 02</b>
+            <ul>
+              <li>입력: 상담 기록·AI 전환 의향 분류</li>
+              <li>계산: 전환예정 고객 × 예상매출 자동 집계</li>
+              <li>출력: 주간 기대매출·리스크 신호 리포트</li>
+            </ul>
+          </div>
+          <figcaption><b>교체 예정</b> — 실제 대시보드 화면을 고객정보 마스킹 후 게재 예정</figcaption>
+        </figure>
+        <figure class="artifact reveal">
+          <img src="assets/artifact_fee.png" alt="수수료 구간 구조도 (익명화)" onerror="this.style.display='none'">
+          <div class="artifact-ph" role="img" aria-label="수수료 구조 플레이스홀더">
+            <b>③ 수수료 구간 구조도 — Project 03</b>
+            <ul>
+              <li>거래 구간별 수수료 정책 구조</li>
+              <li>환불·이용정책과 손익 연결 관계</li>
+            </ul>
+          </div>
+          <figcaption><b>교체 예정</b> — 회사 기밀을 제외한 구조도로 재구성 예정</figcaption>
+        </figure>
+        <figure class="artifact reveal">
+          <img src="assets/artifact_report.png" alt="경영진 보고 자료 예시 (익명화)" onerror="this.style.display='none'">
+          <div class="artifact-ph" role="img" aria-label="경영진 보고 플레이스홀더">
+            <b>④ 경영진 보고 자료 — IR Deck·AI 리포트</b>
+            <ul>
+              <li>IR Deck 목차·스토리라인 (어브로딘)</li>
+              <li>AI 자동 생성 실적 리포트 샘플 (메디힘)</li>
+            </ul>
+          </div>
+          <figcaption><b>교체 예정</b> — 기밀 수치 익명화 후 구성 예시로 게재 예정</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 채용업무–경험 매칭 -->
+  <section id="match">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Role Match</div>
+        <h2>채용 핵심 업무 × 경험 매칭</h2>
+      </div>
+      <div class="panel sheet-ui reveal">
+        <div class="sheet-bar"><span class="sheet-dot"></span><span class="sheet-title">ROLE_MATCH · 채용 핵심 업무 5개</span></div>
+        <div class="sheet-wrap">
+          <table>
+            <thead>
+              <tr><th>채용 핵심 업무</th><th>증명 프로젝트</th><th>수행 내용</th><th>성과·산출물</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="req">사업계획 및 KPI</td><td><a href="#p1">Project 01</a></td><td>지점별 목표 배분·조율, 공통 KPI 정의</td><td>KPI 정의 체계, 신규 지점 매출 안정화율 80%</td></tr>
+              <tr><td class="req">실적 마감 및 차이 분석</td><td><a href="#p1">Project 01</a></td><td>주간·월간 실적 마감, 편차 원인 분석 후 개선 실행</td><td>주간·월간 리포트, 객단가 +21% 등 지표 개선</td></tr>
+              <tr><td class="req">손익·Forecast</td><td><a href="#p2">Project 02</a> · <a href="#p3">03</a></td><td>기대매출 자동 집계 구축, 수수료 정책 설계</td><td>상시 Forecast 보드, 수수료 구간 구조</td></tr>
+              <tr><td class="req">경영진 보고</td><td><a href="#artifacts">산출물 ④</a></td><td>IR Deck·경영진 PT·예상 Q&amp;A 설계, AI 리포트 자동화</td><td>IR Deck, 자동 생성 실적 리포트</td></tr>
+              <tr><td class="req">Excel·데이터 활용</td><td><a href="#p2">Project 02</a></td><td>지표 재구성(Excel·Sheets), SQL·API 파이프라인 구현</td><td>자동 집계·발송 체계</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 결제·멤버십 도메인 경험 -->
+  <section id="domain">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Domain</div>
+        <h2>결제·멤버십 도메인 경험</h2>
+      </div>
+      <div class="panel domain-card reveal">
+        <div class="domain-badge">MP</div>
+        <div>
+          <h3>머지포인트 — 결제·멤버십 플랫폼</h3>
+          <p class="meta">2019.08–2021.05 · 마케팅팀 → 브랜드관리 주임</p>
+          <ul>
+            <li>시장 리서치 기반 입점·프로모션 제안서로 <b>98개 브랜드 입점</b> 도모, <b>제휴 이벤트 30건</b> 협의·진행</li>
+            <li>제휴 이벤트 기간 매출 약 <b>2.6배</b> 수준 확대 <span class="todo">※ 비이벤트 기간 대비인지, 기존 매출 대비 260% 증가인지 확인 필요</span></li>
+            <li>구독 서비스 '머지플러스' 기획 참여, DAU·MAU 일 단위 모니터링</li>
+          </ul>
+          <p class="footnote">가맹점 공급(입점)과 사용자 수요(이벤트·구독)를 함께 다룬 경험으로, 유사 구조 사업의 실적을 이해하는 기반이 됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 예산 편성 경험의 공백과 보완 -->
+  <section id="budget">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Budget Readiness</div>
+        <h2>예산 편성 경험과 보완 준비</h2>
+      </div>
+      <div class="panel budget-note reveal">
+        <p>직접적인 전사 예산 편성 경험은 제한적입니다. 다만 매출 목표 배분, 수수료 정책 설계, 예상매출 산정 경험을 통해 <b>계획–실적–Forecast의 연결 구조</b>를 다뤄왔으며, 아래는 직무 이해를 바탕으로 구성한 예산 관리 화면 예시입니다.</p>
+      </div>
+      <div class="panel sheet-ui reveal">
+        <div class="sheet-bar"><span class="sheet-dot"></span><span class="sheet-title">BUDGET_SAMPLE · 예산–실적–Forecast 관리 예시</span></div>
+        <div class="sheet-wrap">
+          <table class="budget-table">
+            <thead>
+              <tr><th>사업부</th><th>계정</th><th>연간 예산</th><th>월별 계획(누적)</th><th>누적 실적</th><th>집행률</th><th>연말 Forecast</th><th>계획 대비 차이</th><th>차이 원인</th><th>대응안</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>사업부 A</td><td>마케팅비</td><td>100</td><td>50</td><td>46</td><td>46%</td><td>96</td><td class="pos">-4 (절감)</td><td>캠페인 일정 이월</td><td>4분기 집행 계획 재배분</td></tr>
+              <tr><td>사업부 A</td><td>지급수수료</td><td>100</td><td>50</td><td>58</td><td>58%</td><td>112</td><td class="neg">+12 (초과)</td><td>거래량 증가로 변동비 상승</td><td>단가 재협상·요율 구간 검토</td></tr>
+              <tr><td>사업부 B</td><td>인건비</td><td>100</td><td>50</td><td>50</td><td>50%</td><td>100</td><td>0</td><td>계획 부합</td><td>유지</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="budget-caption">※ 직무 이해를 바탕으로 구성한 예산–실적–Forecast 관리 예시이며, 실제 회사 데이터가 아닙니다. 수치는 연간 예산을 100으로 둔 지수입니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 90일 계획 -->
+  <section id="plan">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">First 90 Days</div>
+        <h2>입사 후 90일 계획</h2>
+        <p>내부 시스템을 파악하기 전이므로, 진단 → 시범안 → 합의 → 파일럿의 순서로 실행하겠습니다.</p>
+      </div>
+      <div class="plan-grid">
+        <article class="panel plan reveal">
+          <span class="day">Day 1–30</span>
+          <h3>구조 진단</h3>
+          <ul>
+            <li>사업부별 매출·비용·정산 구조 파악</li>
+            <li>월 마감·경영보고 프로세스 파악</li>
+            <li>현행 지표와 데이터 출처 맵 작성</li>
+          </ul>
+        </article>
+        <article class="panel plan reveal">
+          <span class="day">Day 31–60</span>
+          <h3>개선 기회 도출</h3>
+          <ul>
+            <li>계획 대비 실적 차이의 반복 원인 분석</li>
+            <li>수작업 보고·데이터 공백 구간 도출</li>
+            <li>개선 과제의 효과·난이도 평가</li>
+          </ul>
+        </article>
+        <article class="panel plan reveal">
+          <span class="day">Day 61–90</span>
+          <h3>시범안과 파일럿</h3>
+          <ul>
+            <li>사업부 Forecast 표준안 제안</li>
+            <li>경영진 보고 템플릿 시범 개선</li>
+            <li>합의된 1개 과제의 파일럿 실행</li>
+          </ul>
+        </article>
+      </div>
+      <div class="plan-flow reveal" aria-label="실행 흐름"><span>진단</span><i>→</i><span>시범안</span><i>→</i><span>합의</span><i>→</i><span>파일럿</span></div>
+    </div>
+  </section>
+
+  <!-- 9. Closing -->
+  <section class="closing">
+    <div class="wrap closing-grid">
+      <div>
+        <div class="eyebrow">Closing</div>
+        <h2>계획과 실적 사이의 차이를<br>설명할 수 있는 경영기획자입니다.</h2>
+        <div class="strengths">
+          <div><b>01</b>KPI 설계와 실적 편차 분석의 실무 반복 경험</div>
+          <div><b>02</b>매출 Forecast·경영보고를 시스템으로 구현하는 실행력</div>
+          <div><b>03</b>결제·멤버십 플랫폼에서의 실무 경험</div>
+        </div>
+        <p class="last">이 경험이 섹타나인의 경영기획에 어떻게 기여할 수 있는지, 면접에서 구체적으로 말씀드리겠습니다.</p>
+      </div>
+      <div class="contact-card">
+        <b>신유경 · 경영기획 담당 지원</b>
+        <a href="mailto:ceres0409@gmail.com">ceres0409@gmail.com</a>
+        <span class="ph" id="phone-slot">연락처: 이력서 기재</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">© 2026 신유경 · Secta9ine Business Planning Portfolio</footer>
+
+<script>
+// ===== 설정 =====
+// 전화번호 공개 여부: 공개 배포본에서는 false 유지, 제출용 PDF 등에서 공개하려면 true로 변경
+const SHOW_PHONE = false;
+const PHONE_NUMBER = '010-3089-9889';
+
+document.documentElement.classList.add('js');
+
+if (SHOW_PHONE) {
+  const slot = document.getElementById('phone-slot');
+  if (slot) {
+    const a = document.createElement('a');
+    a.href = 'tel:' + PHONE_NUMBER.replace(/-/g, '');
+    a.textContent = PHONE_NUMBER;
+    slot.replaceWith(a);
+  }
+}
+
+const targets = document.querySelectorAll('.reveal');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('on');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  targets.forEach((target, index) => {
+    target.style.transitionDelay = `${Math.min(index % 4 * 50, 150)}ms`;
+    observer.observe(target);
+  });
+} else {
+  targets.forEach((target) => target.classList.add('on'));
+}
+</script>
+</body>
+</html>
